@@ -433,11 +433,6 @@ int main() {
 }
 
 // Begin Functions
-double En(int n) {
-
-
- return n*n*h*h*pi*pi/(2*m*L*L);
-}
 
 double GroundtstateEnergyCalc ( int numorbs, int *E) {
   double energy_sum, fac;
@@ -617,14 +612,6 @@ for (i=0; i<(norbs*norbs*norbs); i++) {
   }
 
 }
-
-double DeltaE(int fin, int init) {
-
-                     return ((h*h*pi*pi)/(2*m*L*L))*(fin*fin-init*init);
-
-}
-
-
 
 int **MAT_INT(int dim1, int dim2){
   int i,j,k;
