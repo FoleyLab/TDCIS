@@ -73,8 +73,7 @@ double TransitionDipole_X(int nx, int nxp, int ny, int nyp, int nz, int nzp);
 double TransitionDipole_Y(int ny, int nyp, int nx, int nxp, int nz, int nzp);
 double TransitionDipole_Z(int nz, int nzp, int nx, int nxp, int ny, int nyp);
 
-double En(int n);
-double DeltaE(int fin, int init);
+
 double GroundtstateEnergyCalc ( int numorbs, int *E);
 double ExcitedstateEnergyCalc ( int orbital_i, int orbital_a, double energy_total, int *E);
 void OrderPsis(int norbs, int *E, int **MO);
@@ -384,26 +383,6 @@ int main() {
         }
         
 */
-        FILE *cisabfp;
- 
-        cisabfp = fopen("CIS_Absorption.txt","w");
-
-        double DeltaE;
-        idx=1;
-        for (i=nocc; i>(nocc-nact); i--) {
-
-          for (a=nocc+1; a<=(nocc+next); a++) {
-
-            DeltaE = ExcitedstateEnergyCalc(i,a, Eg, E) - Eg;
-            fprintf(cisabfp,"  %f  %f\n",45.6/DeltaE,fabs(mx[idx]+my[idx]+mz[idx]));
-            idx++;
-
-          }
-        }
-
-        fclose(cisabfp);
-
-
 
         // Now solve TDSE!
         Propagate(sup, nstates, H0, mu, Frontier, E, init);
