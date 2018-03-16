@@ -119,7 +119,7 @@ int main() {
         // Ground-state energy and excited-state energies
         double Ei, Eg;
 
-        // nx ny nz equal to three (3)
+        // The program Determin
         nmax = 10;
         // number of electrons
         Nels = 1104;
@@ -994,7 +994,7 @@ void HdotC(int end, int iter, double m, double *H0, double *mu, double *C, doubl
   // time demanded by Sanz-Serna algorithm
 
   // remember that we offset the fields and time arrays by 1 so that we can always take centered finite differences
-  if (1) {
+
     // This is the time at the current iteration
     current_time = fdtd_time[iter+1];
     // This is the time at the current stencil point
@@ -1030,7 +1030,7 @@ void HdotC(int end, int iter, double m, double *H0, double *mu, double *C, doubl
     // HdC -= lpulse_z*muz*C
     F_DGEMV( 'T', n, n, -1*stencil_fieldz, mz, lda, C, 1, 1, HdC, 1);
 
-  }
+ 
 
 }
 
@@ -1164,6 +1164,9 @@ void buildBasis(int no, int nv, int **abaa,int **ibaa) {
    }
 }
 
+// This will generate a spectrum proportional to the polarizability of the nanocube, but
+// it will not be the absorption cross section as written because it is not dividing by the FT 
+// of the incident field...
 void AbsorptionSpectrum(int iter, int extra_pts, double *mutr, double *muti) {
 
   fftw_plan p;
