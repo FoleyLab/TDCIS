@@ -119,7 +119,9 @@ int main() {
         // Ground-state energy and excited-state energies
         double Ei, Eg;
 
-        // The program Determin
+        // The program NumberElectrons_ParticleInCube.c can be used to determine the appropriate nmax, Nels, etc
+	// for the system you are interested in (based on Fermi level of the metal you are modeling and the dimensions
+	// of the nanocube)
         nmax = 10;
         // number of electrons
         Nels = 1104;
@@ -129,7 +131,9 @@ int main() {
         nvirt = pow(nmax,3) - nocc;
         // nuclear attraction energy
         E_attraction = 0.;
-        // Number of active occupied orbitals to excite out of
+	// Define an active space for the CIS calculation... the number of terms in the CIS wavefunction
+	// you will propagate will be nact * next
+        // Number of active occupied orbitals to excite out o
         nact = 70;
         // Number of external orbitals to excite into
         next = 80;
