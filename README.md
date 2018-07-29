@@ -25,6 +25,11 @@ This code utilizes some standard routines from the [Basic Linear Algebra Package
 - The user can specify the form of the electric field, currently the program will look for real-time electric
 field data in data files in the FIELDS directory
 
-- The user can specify the number of electrons and details of the number of occupied/unoccupied orbitals in the code, and there is a program called 
+- The user can specify the number of electrons and details of the number of occupied/unoccupied orbitals in the code, and there is a program called [NumberElectrons_Nanocube.c](https://github.com/FoleyLab/TDCIS/blob/master/NumberElectrons_Nanocube.c) can help you compute the appropriate number for the metal you are trying to model and its geometry.
+
+- Note: To compile NumberElectrons_Nanocube.c, just type
+
+`g++ -o NumberElectrons_Nanocube.exe NumberElectrons_Nanocube.c`
+
 
 
