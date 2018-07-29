@@ -16,10 +16,15 @@ This code utilizes some standard routines from the [Basic Linear Algebra Package
 
 - The code will write data to a number of data files, and you can make simple changes to the source code to customize the data printed:
 
--- DATA/DipoleMoment.txt will contain the time-dependent dipole moment of a nanoparticle
+- DATA/DipoleMoment.txt will contain the time-dependent dipole moment of a nanoparticle
 
--- Populations will contain the population of all the orbitals at each time step
+- Populations will contain the population of all the orbitals at each time step
 
--- Population_Trace will contain the populations of select orbital(s) as a function of time
+- Population_Trace will contain the populations of select orbital(s) as a function of time
+
+- The user can specify the form of the electric field, currently the program will look for real-time electric
+field data in data files in the FIELDS directory
+
+- The user can specify the number of electrons and details of the number of occupied/unoccupied orbitals in the code, and there is a program called 
 
 
