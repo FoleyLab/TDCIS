@@ -18,11 +18,8 @@ This code utilizes some standard routines from the [Basic Linear Algebra Package
 
 -- DATA/DipoleMoment.txt will contain the time-dependent dipole moment of a nanoparticle
 
--- Orbital.txt will contain the population 
+-- Populations will contain the population of all the orbitals at each time step
+
+-- Population_Trace will contain the populations of select orbital(s) as a function of time
 
 
-  dmfp  = fopen("DATA/DipoleMoment_121.1nm_0_331_Pt.txt","w");
-  orbfp = fopen("DATA/Orbital_121.1nm_0_331_Pt.txt","w");
-  vfp   = fopen("DATA/Dipole_Vector_121.1nm_0_331_Pt.txt","w");
-  popfp = fopen("DATA/Populations_121.1nm_0_331_Pt.txt","w");
-  poptrace = fopen("DATA/Population_Trace_121.1nm_0_331_Pt.txt","w");
