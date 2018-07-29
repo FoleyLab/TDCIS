@@ -6,5 +6,11 @@ formalism is described in detail in that paper as well.
 
 The main source code is found in TDCIS.c.
 
-This code utilizes some standard routines from the [Basic Linear Algebra Package](http://www.netlib.org/blas/), so when compling 
+This code utilizes some standard routines from the [Basic Linear Algebra Package](http://www.netlib.org/blas/); these functions are contained in blas.c; linking these is taken care of by the Makefile.
+
+- To Compile to create the executable TDCIS.x, type
+`make`
+
+- To run the code, type
+`./TDCIS.x`
 
