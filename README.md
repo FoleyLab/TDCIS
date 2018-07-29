@@ -6,3 +6,5 @@ formalism is described in detail in that paper as well.
 
 The main source code is found in TDCIS.c.
 
+This code utilizes some standard routines from the [Basic Linear Algebra Package](http://www.netlib.org/blas/), so when compling 
+
