@@ -14,3 +14,15 @@ This code utilizes some standard routines from the [Basic Linear Algebra Package
 - To run the code, type
 `./TDCIS.x`
 
+- The code will write data to a number of data files, and you can make simple changes to the source code to customize the data printed:
+
+-- DATA/DipoleMoment.txt will contain the time-dependent dipole moment of a nanoparticle
+
+-- Orbital.txt will contain the population 
+
+
+  dmfp  = fopen("DATA/DipoleMoment_121.1nm_0_331_Pt.txt","w");
+  orbfp = fopen("DATA/Orbital_121.1nm_0_331_Pt.txt","w");
+  vfp   = fopen("DATA/Dipole_Vector_121.1nm_0_331_Pt.txt","w");
+  popfp = fopen("DATA/Populations_121.1nm_0_331_Pt.txt","w");
+  poptrace = fopen("DATA/Population_Trace_121.1nm_0_331_Pt.txt","w");
